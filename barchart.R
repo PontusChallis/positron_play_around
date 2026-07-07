@@ -5,7 +5,7 @@ data(mpg)
 avg_hwy <- aggregate(hwy ~ class, data = mpg, FUN = mean)
 avg_hwy$class <- reorder(avg_hwy$class, avg_hwy$hwy)
 
-ggplot(avg_hwy, aes(x = class, y = hwy, fill = hwy)) +
+p <- ggplot(avg_hwy, aes(x = class, y = hwy, fill = hwy)) +
   geom_col(width = 0.7) +
   geom_text(aes(label = round(hwy, 1)), hjust = -0.2, size = 3.5, color = "gray30") +
   coord_flip() +

@@ -1,0 +1,14 @@
+---
+title: "Test Figures"
+format: html
+---
+
+```{r}
+#| echo: false
+#| message: false
+source("barchart.R")
+```
+
+```{r}
+p
+```
